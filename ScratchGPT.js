@@ -1,6 +1,6 @@
 class ScratchGPT {
   constructor() {
-    this.apiKey = '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'; // ⚠️ Setze hier DEINEN OpenRouter-API-Key ein
+    this.apiKey = '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';
   }
 
   getInfo() {
@@ -33,7 +33,7 @@ class ScratchGPT {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'mmistralai/mistral-7b-instruct:free', // oder openai/gpt-3.5-turbo
+        model: 'mmistralai/mistral-7b-instruct:free',
         messages: [{ role: 'user', content: prompt }],
         temperature: 0.7
       })
