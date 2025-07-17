@@ -25,6 +25,8 @@ class ScratchGPT {
 
   async askGPT(args) {
     const prompt = args.PROMPT;
+    console.log("Sending prompt to OpenRouter:", prompt);
+    console.log("Model:", this.model);
 
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
@@ -38,6 +40,9 @@ class ScratchGPT {
         temperature: 0.7
       })
     });
+    const data = await response.json();
+    console.log("OpenRouter response:", data);
+
 
     const json = await response.json();
     return json.choices?.[0]?.message?.content || 'Fehler';
