@@ -1,6 +1,6 @@
 class ScratchGPT {
   constructor() {
-    this.apiKey = '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';
+    this.apiKey = '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';
   }
 
   getInfo() {
